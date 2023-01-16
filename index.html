@@ -1,21 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Masbaha</title>
-    <link rel="stylesheet" href="style1.css">
-</head>
-<body>
-    <button class="button">click me </button>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Masbaha</title>
+        <link rel="stylesheet" href="style1.css">
+    </head>
+    <body>
+        
+            <script>
+            let value = 1
+            </script>
+        </button>
 
-    <script>
-      document.querySelector('button').
+        <script>
+            document.querySelector('button').
 
-      onclick = function () {
-        this.textContent = 'this text was changed by tt';
-      };
-    </script>
+            onclick = function () {
+                for(let i = 0; i > 10; i++ ){
+                this.textContent = `${i} tt`;
+                }
+            };
+        </script> -->
 </body>
-</html>
+</html> 
+
+
+<!-- <html>
+<head>
+    <title>Space Clicker</title>
+</head> -->
+
+<body>
+    <script type="text/javascript">
+
+    var clicks = 0;
+    function hello() {
+        clicks += 1;
+        document.getElementById("clicks").innerHTML = clicks;
+    };
+    </script>
+    <button type="button" onclick="hello()">Click me</button>
+    <p>Clicks: <a id="clicks">0</a></p>
+
+</body></html>
