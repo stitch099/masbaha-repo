@@ -8,37 +8,35 @@
         <link rel="stylesheet" href="style1.css">
     </head>
     <body>
-    <script type="text/javascript">
+    <div class="container">
+            <script type="text/javascript">
 
-    var clicks = 0;
-    function hello() {
-        clicks += 1;
-        document.getElementById("clicks").innerHTML = clicks;
-    };
-    </script>
-    <button type="button" onclick="hello()">Click me 
-    <p> <a id="clicks">0</a></p>
-    </button>
+            var clicks = 0;
+            function increment () {
+                clicks += 1;
+                document.getElementById("clicks").innerHTML = clicks;
+            };
+            function reset () {
+                let clicks = 0;
+                clicks = 0;
+                document.getElementById("clicks").innerHTML = clicks;
+            }
+            </script>
+        <button type="button" onclick="increment()" class="button">
+            الحمدلله 
+            <p> 
+                <a id="clicks">
+                0
+                </a>
+            </p>
+        </button>
+        <button type="button" onclick="reset()" class = "smallButton">
+            reset
+        </button>
         
+    </div>     
 </body>
 </html> 
 
-
-<!-- <html>
-<head>
-    <title>Space Clicker</title>
-</head> -->
-
-<!-- <body>
-    <script type="text/javascript">
-
-    var clicks = 0;
-    function hello() {
-        clicks += 1;
-        document.getElementById("clicks").innerHTML = clicks;
-    };
-    </script>
-    <button type="button" onclick="hello()">Click me</button>
-    <p>Clicks: <a id="clicks">0</a></p>
-
-</body></html> -->
+<!-- <button type="button" onclick="reset()" class = "smallButton">
+            reset -->
