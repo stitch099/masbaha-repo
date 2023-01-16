@@ -1,13 +1,17 @@
 html{
     height: 100%;
 }
-body{
+/* body{
     background-image: url(img/WhatsApp\ Image\ 2022-09-06\ at\ 1.52.59\ PM\ \(1\).jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+} */
+.button{
+    width: 100px;
+    height: 100px;
+    margin-left : 200px;
 }
-
 
 
 .box{
