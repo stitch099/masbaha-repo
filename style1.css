@@ -30,3 +30,16 @@ p {
     margin-left: auto;
     margin-right: auto;
 }
+.smallButtonTwo {
+    background-color: blueviolet;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+.smallButtonThree {
+    background-color: pink;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}

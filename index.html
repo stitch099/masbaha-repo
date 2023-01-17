@@ -1,38 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Masbaha</title>
-        <link rel="stylesheet" href="style1.css">
-    </head>
-    <body>
-    <div class="container">
-            <script type="text/javascript">
 
-            var clicks = 0;
-            function increment () {
-                clicks += 1;
-                document.getElementById("clicks").innerHTML = clicks;
-            };
-            function reset () {
-                let clicks = 0;
-                clicks = 0;
-                document.getElementById("clicks").innerHTML = clicks;
-            }
-            </script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masbaha</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+    <div class="container">
         <button type="button" onclick="increment()" class="button">
-            الحمدلله 
-            <p> 
-                <a id="clicks">
-                0
+            الحمدلله
+            <p>
+                <a id="count">
+                    0
                 </a>
             </p>
         </button>
-        <button type="button" onclick="reset()" class = "smallButton">
+        <button type="button" onclick="reset()" class="smallButton">
             reset
-        </button>   
-    </div>   
+        </button>
+    </div>
+
+    <script type="text/javascript">
+
+        var count = 0;
+
+        function increment() {
+            setCount(count + 1);
+        };
+
+        function reset() {
+            setCount(0);
+        }
+
+
+        /* ========== HELPER FUNCTIONS ========== */
+
+        let setCount = (number) => {
+            count = number;
+            save();
+            updateView();
+        }
+
+        let updateView = () => {
+            document.querySelector("#count").innerHTML = count;
+        }
+
+        let save = () => {
+            localStorage.setItem("count", count);
+        }
+
+        /* ========== MAIN FUNCTION ========== */
+
+        let main = () => {
+            let count1 = localStorage.getItem("count");
+            if (count1 == null) count1 = 0;
+            else count1 = parseInt(count1);
+            setCount(count1);
+        }
+
+        main();
+
+    </script>
 </body>
-</html> 
+
+</html>
